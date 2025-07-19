@@ -1,0 +1,130 @@
+{
+  "conversation_history": [
+    {
+      "id": "user_20250627_010742_08637fc5",
+      "role": "user",
+      "content": "AMIF kadın hibelerini anlat",
+      "timestamp": "2025-06-27T01:07:42.276455",
+      "context": {
+        "topic_keywords": [
+          "amif",
+          "hibe"
+        ],
+        "grant_types_mentioned": [
+          "women"
+        ],
+        "query_complexity": "simple",
+        "semantic_theme": "general",
+        "response_quality": 0.0,
+        "processing_time": 0.0,
+        "sources_count": 0
+      },
+      "metadata": {},
+      "session_id": "default",
+      "query_hash": "08637fc57ce68929"
+    },
+    {
+      "id": "assistant_20250627_010742",
+      "role": "assistant",
+      "content": "AMIF kadın hibeleri...",
+      "timestamp": "2025-06-27T01:07:42.276474",
+      "context": {
+        "topic_keywords": [
+          "amif",
+          "hibe"
+        ],
+        "grant_types_mentioned": [
+          "women"
+        ],
+        "query_complexity": "simple",
+        "semantic_theme": "general",
+        "response_quality": 0.0,
+        "processing_time": 15.2,
+        "sources_count": 0
+      },
+      "metadata": {
+        "sources": [
+          "doc1.pdf",
+          "doc2.pdf"
+        ],
+        "processing_time": 15.2,
+        "grant_types": [
+          "WOMEN"
+        ]
+      },
+      "session_id": "default",
+      "query_hash": ""
+    },
+    {
+      "id": "user_20250627_010820_08637fc5",
+      "role": "user",
+      "content": "AMIF kadın hibelerini anlat",
+      "timestamp": "2025-06-27T01:08:20.548026",
+      "context": {
+        "topic_keywords": [
+          "amif",
+          "hibe"
+        ],
+        "grant_types_mentioned": [
+          "women"
+        ],
+        "query_complexity": "simple",
+        "semantic_theme": "general",
+        "response_quality": 0.0,
+        "processing_time": 0.0,
+        "sources_count": 0
+      },
+      "metadata": {},
+      "session_id": "default",
+      "query_hash": "08637fc57ce68929"
+    },
+    {
+      "id": "assistant_20250627_010820",
+      "role": "assistant",
+      "content": "AMIF kadın hibeleri...",
+      "timestamp": "2025-06-27T01:08:20.548041",
+      "context": {
+        "topic_keywords": [
+          "amif",
+          "hibe"
+        ],
+        "grant_types_mentioned": [
+          "women"
+        ],
+        "query_complexity": "simple",
+        "semantic_theme": "general",
+        "response_quality": 0.0,
+        "processing_time": 15.2,
+        "sources_count": 0
+      },
+      "metadata": {
+        "sources": [
+          "doc1.pdf",
+          "doc2.pdf"
+        ],
+        "processing_time": 15.2,
+        "grant_types": [
+          "WOMEN"
+        ]
+      },
+      "session_id": "default",
+      "query_hash": ""
+    }
+  ],
+  "semantic_clusters": {
+    "general": [
+      "user_20250627_010742_08637fc5",
+      "assistant_20250627_010742",
+      "user_20250627_010820_08637fc5",
+      "assistant_20250627_010820"
+    ]
+  },
+  "query_cache": {},
+  "topic_trends": {
+    "amif": 2,
+    "hibe": 2,
+    "grant_women": 2
+  },
+  "session_id": null,
+  "last_updated": "2025-06-27T01:08:20.548141"
+}

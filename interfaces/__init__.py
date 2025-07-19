@@ -1,0 +1,3 @@
+"""
+Interfaces modülü - Kullanıcı arayüzleri
+""" 

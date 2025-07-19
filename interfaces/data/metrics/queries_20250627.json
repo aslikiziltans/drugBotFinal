@@ -1,0 +1,17 @@
+[
+  {
+    "query_id": "session-1750977415604-25nmcwjc9",
+    "query_text": "How are EU personnel costs calculated?",
+    "start_time": "2025-06-27T02:51:14.669224",
+    "end_time": "2025-06-27T02:52:08.492617",
+    "total_duration": 53.823393,
+    "retrieval_duration": null,
+    "qa_duration": null,
+    "source_tracking_duration": null,
+    "documents_retrieved": 8,
+    "sources_generated": 8,
+    "detected_language": "english",
+    "success": true,
+    "error_message": null
+  }
+]

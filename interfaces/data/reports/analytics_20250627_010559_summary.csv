@@ -1,0 +1,2 @@
+total_batches,total_queries,success_rate,total_successful_queries,total_failed_queries,average_batch_processing_time,average_query_processing_time,unique_grant_types_analyzed,grant_types_list,cross_document_analyses_performed,total_sources_found,average_sources_per_query
+1,4,0.0,0,4,0.0,0.0,0,[],0,0,0.0

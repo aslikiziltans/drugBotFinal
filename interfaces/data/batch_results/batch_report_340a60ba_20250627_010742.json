@@ -1,0 +1,135 @@
+{
+  "batch_request": {
+    "id": "340a60ba-8304-4d23-a70f-2ac3cadf4aa2",
+    "name": "Test Batch Analysis",
+    "description": "Test batch for workflows",
+    "queries": [
+      {
+        "id": "9641e72c-2334-46df-96a9-e1430cc8a49d",
+        "query": "AMIF women grants eligibility criteria",
+        "language": null,
+        "priority": 2,
+        "metadata": {
+          "index": 0
+        },
+        "expected_grant_types": []
+      },
+      {
+        "id": "5f8e9808-3318-4b68-9b7f-377e3efad948",
+        "query": "AMIF children grants funding amounts",
+        "language": null,
+        "priority": 2,
+        "metadata": {
+          "index": 1
+        },
+        "expected_grant_types": []
+      },
+      {
+        "id": "c9410c7f-6894-49e7-a653-25c6f3ccc871",
+        "query": "AMIF health grants application process",
+        "language": null,
+        "priority": 2,
+        "metadata": {
+          "index": 2
+        },
+        "expected_grant_types": []
+      },
+      {
+        "id": "cb9d6eb0-5c41-4624-8473-76bc0726327a",
+        "query": "What are the differences between AMIF grant types?",
+        "language": null,
+        "priority": 2,
+        "metadata": {
+          "index": 3
+        },
+        "expected_grant_types": []
+      }
+    ],
+    "settings": {},
+    "created_at": "2025-06-27T01:07:42.442906",
+    "max_workers": 2,
+    "timeout_per_query": 60,
+    "generate_report": true,
+    "output_format": "json"
+  },
+  "batch_result": {
+    "request_id": "340a60ba-8304-4d23-a70f-2ac3cadf4aa2",
+    "status": "completed",
+    "total_queries": 4,
+    "successful_queries": 0,
+    "failed_queries": 4,
+    "results": [
+      {
+        "query_id": "9641e72c-2334-46df-96a9-e1430cc8a49d",
+        "query": "AMIF women grants eligibility criteria",
+        "status": "BatchStatus.FAILED",
+        "response": "",
+        "sources": [],
+        "processing_time": 4.9114227294921875e-05,
+        "error_message": "'MultiAgentGraph' object has no attribute 'process_query'",
+        "metadata": {},
+        "cross_document_analysis": {},
+        "timestamp": "2025-06-27 01:07:42.443043"
+      },
+      {
+        "query_id": "5f8e9808-3318-4b68-9b7f-377e3efad948",
+        "query": "AMIF children grants funding amounts",
+        "status": "BatchStatus.FAILED",
+        "response": "",
+        "sources": [],
+        "processing_time": 6.29425048828125e-05,
+        "error_message": "'MultiAgentGraph' object has no attribute 'process_query'",
+        "metadata": {},
+        "cross_document_analysis": {},
+        "timestamp": "2025-06-27 01:07:42.443116"
+      },
+      {
+        "query_id": "cb9d6eb0-5c41-4624-8473-76bc0726327a",
+        "query": "What are the differences between AMIF grant types?",
+        "status": "BatchStatus.FAILED",
+        "response": "",
+        "sources": [],
+        "processing_time": 2.002716064453125e-05,
+        "error_message": "'MultiAgentGraph' object has no attribute 'process_query'",
+        "metadata": {},
+        "cross_document_analysis": {},
+        "timestamp": "2025-06-27 01:07:42.443145"
+      },
+      {
+        "query_id": "c9410c7f-6894-49e7-a653-25c6f3ccc871",
+        "query": "AMIF health grants application process",
+        "status": "BatchStatus.FAILED",
+        "response": "",
+        "sources": [],
+        "processing_time": 4.792213439941406e-05,
+        "error_message": "'MultiAgentGraph' object has no attribute 'process_query'",
+        "metadata": {},
+        "cross_document_analysis": {},
+        "timestamp": "2025-06-27 01:07:42.443159"
+      }
+    ],
+    "started_at": "2025-06-27T01:07:42.442920",
+    "completed_at": "2025-06-27T01:07:42.443219",
+    "total_processing_time": 0.000299,
+    "summary_stats": {
+      "success_rate": 0.0,
+      "average_processing_time": 4.500150680541992e-05,
+      "total_sources_found": 0,
+      "average_sources_per_query": 0.0,
+      "language_distribution": {
+        "unknown": 4
+      },
+      "grant_types_analyzed": [],
+      "query_complexity_distribution": {
+        "simple": 0,
+        "medium": 4,
+        "complex": 0
+      },
+      "cross_document_analysis_performed": 0,
+      "total_documents_processed": 0
+    },
+    "report_path": null
+  },
+  "generated_at": "2025-06-27T01:07:42.443350",
+  "generator": "BatchProcessor v1.0"
+}

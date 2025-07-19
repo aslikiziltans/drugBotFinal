@@ -1,0 +1,138 @@
+{
+  "tasks": {
+    "task_20250627_010559_0": {
+      "id": "task_20250627_010559_0",
+      "name": "Daily Analytics Report",
+      "task_type": "report_generation",
+      "schedule_type": "daily",
+      "schedule_config": {
+        "time": "09:00"
+      },
+      "task_config": {
+        "report_type": "analytics",
+        "time_period": "last_24_hours"
+      },
+      "created_at": "2025-06-27T01:05:59.787394",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "task_20250627_010559_1": {
+      "id": "task_20250627_010559_1",
+      "name": "Custom Grant Analysis",
+      "task_type": "batch_analysis",
+      "schedule_type": "weekly",
+      "schedule_config": {
+        "day": "friday",
+        "time": "14:00"
+      },
+      "task_config": {
+        "queries": [
+          "AMIF grant deadline analysis",
+          "AMIF budget allocation comparison"
+        ],
+        "max_workers": 1
+      },
+      "created_at": "2025-06-27T01:05:59.787621",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "task_20250627_010742_2": {
+      "id": "task_20250627_010742_2",
+      "name": "Daily Analytics Report",
+      "task_type": "report_generation",
+      "schedule_type": "daily",
+      "schedule_config": {
+        "time": "09:00"
+      },
+      "task_config": {
+        "report_type": "analytics",
+        "time_period": "last_24_hours"
+      },
+      "created_at": "2025-06-27T01:07:42.916247",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "task_20250627_010742_3": {
+      "id": "task_20250627_010742_3",
+      "name": "Custom Grant Analysis",
+      "task_type": "batch_analysis",
+      "schedule_type": "weekly",
+      "schedule_config": {
+        "day": "friday",
+        "time": "14:00"
+      },
+      "task_config": {
+        "queries": [
+          "AMIF grant deadline analysis",
+          "AMIF budget allocation comparison"
+        ],
+        "max_workers": 1
+      },
+      "created_at": "2025-06-27T01:07:42.916397",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "task_20250627_010821_4": {
+      "id": "task_20250627_010821_4",
+      "name": "Daily Analytics Report",
+      "task_type": "report_generation",
+      "schedule_type": "daily",
+      "schedule_config": {
+        "time": "09:00"
+      },
+      "task_config": {
+        "report_type": "analytics",
+        "time_period": "last_24_hours"
+      },
+      "created_at": "2025-06-27T01:08:21.252605",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "task_20250627_010821_5": {
+      "id": "task_20250627_010821_5",
+      "name": "Custom Grant Analysis",
+      "task_type": "batch_analysis",
+      "schedule_type": "weekly",
+      "schedule_config": {
+        "day": "friday",
+        "time": "14:00"
+      },
+      "task_config": {
+        "queries": [
+          "AMIF grant deadline analysis",
+          "AMIF budget allocation comparison"
+        ],
+        "max_workers": 1
+      },
+      "created_at": "2025-06-27T01:08:21.252825",
+      "last_run": null,
+      "next_run": null,
+      "is_active": true,
+      "run_count": 0,
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "task_history": [],
+  "last_updated": "2025-06-27T01:08:21.252845"
+}

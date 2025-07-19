@@ -1,0 +1,80 @@
+{
+  "report_id": "analytics_20250627_010742",
+  "title": "AMIF Grant Assistant - Comprehensive Analytics Report",
+  "description": "Analysis of 1 batch operations from 2025-06-27 to 2025-06-27",
+  "generated_at": "2025-06-27T01:07:42.911241",
+  "data_period": {
+    "start_date": "2025-06-27T01:07:42.442920",
+    "end_date": "2025-06-27T01:07:42.443219"
+  },
+  "summary": {
+    "total_batches": 1,
+    "total_queries": 4,
+    "success_rate": 0.0,
+    "total_successful_queries": 0,
+    "total_failed_queries": 4,
+    "average_batch_processing_time": 0.0,
+    "average_query_processing_time": 0.0,
+    "unique_grant_types_analyzed": 0,
+    "grant_types_list": [],
+    "cross_document_analyses_performed": 0,
+    "total_sources_found": 0,
+    "average_sources_per_query": 0.0
+  },
+  "sections": [
+    {
+      "title": "Performance Analysis",
+      "description": "Analysis of system performance metrics",
+      "metrics": {
+        "average_success_rate": 0.0,
+        "average_processing_time": 0.0,
+        "fastest_batch": 0.000299,
+        "slowest_batch": 0.000299,
+        "performance_consistency": 1.0
+      }
+    },
+    {
+      "title": "Grant Analysis",
+      "description": "Analysis of grant types and cross-document relationships",
+      "metrics": {
+        "total_grant_types_found": 0,
+        "most_analyzed_grant_type": "N/A",
+        "cross_document_analyses": 0,
+        "grant_type_distribution": {}
+      }
+    },
+    {
+      "title": "Query Analysis",
+      "description": "Analysis of user queries and response patterns",
+      "metrics": {
+        "total_queries": 4,
+        "average_response_length": 0,
+        "complexity_distribution": {
+          "Medium": 4
+        },
+        "language_distribution": {
+          "unknown": 4
+        },
+        "longest_response": 0,
+        "shortest_response": 0
+      }
+    },
+    {
+      "title": "Trend Analysis",
+      "description": "Time-based trends and performance evolution",
+      "metrics": {
+        "analysis_period_days": 0,
+        "trend_direction": "stable",
+        "peak_performance_date": "2025-06-27T01:07:42.442920",
+        "total_batches_analyzed": 1
+      }
+    }
+  ],
+  "visualizations": [
+    "interfaces/data/reports/analytics_20250627_010742_processing_times.png",
+    "interfaces/data/reports/analytics_20250627_010742_success_rates.png",
+    "interfaces/data/reports/analytics_20250627_010742_query_complexity.png",
+    "interfaces/data/reports/analytics_20250627_010742_language_distribution.png"
+  ],
+  "export_formats": []
+}
