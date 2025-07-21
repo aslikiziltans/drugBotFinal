@@ -1,3 +1,43 @@
+Ürün İsmi
+
+DrugBot – Akıllı İlaç Bilgi Asistanı
+
+Ürün Açıklaması
+
+İlaçBot, vatandaşların ilaç kullanımıyla ilgili temel sorularına kolay anlaşılır, güvenilir ve güncel cevaplar sunan bir yapay zeka destekli sohbet asistanıdır. Kullanıcılar, ilaç adını ya da barkodunu girerek ya da doğal dilde soru sorarak hızlıca bilgiye ulaşabilir.
+
+Ürün Özellikleri
+
+•	İlaç Bilgi Veritabanı: Tüm ilaçların prospektüs verileri (doz, kullanım şekli, yan etkiler, kontrendikasyonlar) güncel olarak saklanır.
+•	Doğal Dil ile Soru-Cevap: Kullanıcı, örn. “Bu ilaç aç mı tok mu alınmalı?” gibi serbestçe soru yazar; chatbot kısa, sade yanıt üretir.
+•	Kritik Durumlarda Yönlendirme: Riskli ya da acil sorularda kullanıcıyı hekime veya eczacıya yönlendirir.
+•	Arama ve Doğrulama: Yanlış/eksik ilaç adı girildiğinde doğrulama ister.
+•	Kullanıcı Arayüzü: Basit web/mobil ekranı, soru geçmişi ve favori ilaçlar.
+•	Güvenli Bilgi: Medikal danışman onaylı, sadece bilimsel kaynaklara dayalı cevaplar.
+
+Hedef Kitle
+
+•	Her yaş ve eğitim düzeyinden vatandaşlar
+•	Özellikle yaşlılar, kronik hastalar ve yakınları
+•	Düşük sağlık okuryazarlığı olan bireyler
+
+Product Backlog (Kısa Liste)
+
+1.	İlaç veritabanı oluşturulması ve güncelleme sistemi
+2.	Prospektüs bilgilerini otomatik çekme ve işleme
+3.	Kullanıcıdan doğal dilde soru alma modülü
+4.	LLM ile özet ve sade yanıt üretme
+5.	Kritik uyarı ve hekime yönlendirme sistemi
+6.	Web ve mobil arayüz tasarımı
+7.	Kullanıcı geçmişi ve favori ilaçlar özelliği
+8.	Medikal doğruluk kontrolleri ve testler
+
+Sprint Planı (3 Sprint)
+
+•	Sprint 1: Temel ilaç veritabanı kurulumu, prospektüs veri çekme & arama/doğrulama
+•	Sprint 2: LLM entegrasyonu, soru-cevap motoru ve uyarı sistemi
+•	Sprint 3: Web/mobil arayüz, kullanım geçmişi, test ve kullanıcı geri bildirimi
+<img width="470" height="645" alt="image" src="https://github.com/user-attachments/assets/8ae1d98f-bad7-4114-ba59-afd6167a2bc6" />
 # 💊 DrugBot - Proje Geliştirme Raporu
 
 Bu doküman, DrugBot projesinin geliştirme süreçlerini ve sprint çıktılarını detaylandırmak amacıyla oluşturulmuştur.
