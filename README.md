@@ -1,248 +1,140 @@
-# 💊 DrugBot - İlaç Bilgi Asistanı
+# 💊 DrugBot - Proje Geliştirme Raporu
 
-> **OnSIDES Dataset ile güçlendirilmiş akıllı ilaç danışmanı**
-
-DrugBot, 2,562 ilaç bileşeni hakkında güvenilir bilgi sunan yapay zeka destekli web uygulamasıdır. FDA, EMA ve KEGG kaynaklarından derlenen OnSIDES v3.1.0 dataset'ini kullanarak ilaç yan etkileri, kullanım talimatları ve yemek etkileşimleri hakkında anlaşılır bilgiler verir.
-
-## 🌟 Özellikler
-
-### 🔍 **Akıllı İlaç Arama**
-- 2,562 ilaç bileşeni veritabanı
-- Semantik arama ile doğru sonuçlar
-- Türkçe sorgu desteği
-
-### 💬 **Anlaşılır Yanıtlar**
-- Tıbbi terimler yerine günlük dil
-- Emoji destekli düzenli format
-- Korkutmayan, bilgilendirici ton
-
-### 🎨 **Modern Web Arayüzü**
-- Koyu tema ile göz dostu tasarım
-- Responsive mobil uyumlu
-- Gerçek zamanlı sohbet deneyimi
-
-### 🔒 **Güvenlik Öncelikli**
-- Sürekli tıbbi uyarılar
-- Kaynak şeffaflığı
-- Doktor tavsiyesi hatırlatmaları
-
-## 🚀 Hızlı Başlangıç
-
-### Gereksinimler
-```bash
-Python 3.8+
-OpenAI API Key
-```
-
-### 1. Kurulum
-```bash
-# Depoyu klonlayın
-git clone <repo-url>
-cd GrantSpider
-git checkout asliFeatures
-
-# Bağımlılıkları yükleyin
-pip install -r requirements.txt
-```
-
-### 2. Çevre Değişkenlerini Ayarlayın
-```bash
-# .env dosyası oluşturun
-echo "OPENAI_API_KEY=your_api_key_here" > .env
-```
-
-### 3. Vektör Veritabanını Oluşturun
-```bash
-python3 create_drug_vectordb.py
-```
-
-### 4. Web Uygulamasını Başlatın
-```bash
-python3 interfaces/drugbot_web.py
-```
-
-### 5. Tarayıcıda Açın
-```
-http://localhost:5001
-```
-
-## 📱 Kullanım
-
-### Örnek Sorular
-- "aspirin yan etkileri nelerdir?"
-- "paracetamol aç karınla mı alınır?"
-- "ibuprofen ne için kullanılır?"
-- "antibiyotik nasıl kullanılır?"
-
-### Yanıt Formatı
-```
-💊 İlaç Hakkında: [Ne için kullanılır]
-⚠️ Olası Yan Etkiler: [Yaygın yan etkiler]
-🍽️ Nasıl Alınır: [Yemek ile ilişkisi]
-⏰ Ne Zaman Alınır: [Dozaj zamanlaması]
-💡 Dikkat Edilecekler: [Önemli uyarılar]
-🏥 Hatırlatma: [Doktor tavsiyesi]
-```
-
-## 🏗️ Mimari
-
-### Klasör Yapısı
-```
-DrugBot/
-├── agents/                 # LangGraph ajanları
-│   ├── drug_advisor_agent.py
-│   └── document_retriever.py
-├── ingestion/             # Veri işleme
-│   ├── drug_data_processor.py
-│   ├── drug_pdf_loader.py
-│   └── vector_store.py
-├── interfaces/            # Web arayüzü
-│   ├── drugbot_web.py
-│   ├── templates/
-│   └── static/
-├── data/                  # Veritabanları
-│   ├── db/               # Vektör veritabanı
-│   └── processed/        # İşlenmiş veriler
-└── create_drug_vectordb.py # Veritabanı oluşturucu
-```
-
-### Teknoloji Yığını
-- **Backend**: Flask, LangChain, OpenAI GPT-4
-- **Vector DB**: ChromaDB
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Dataset**: OnSIDES v3.1.0 (FDA/EMA/KEGG)
-
-## 🔧 API Endpointleri
-
-### Chat Endpoint
-```bash
-POST /api/chat
-Content-Type: application/json
-
-{
-  "message": "aspirin yan etkileri nelerdir?"
-}
-```
-
-### Sistem İstatistikleri
-```bash
-GET /api/stats
-```
-
-### Son Sorgular
-```bash
-GET /api/recent
-```
-
-## 📊 Dataset Bilgileri
-
-### OnSIDES v3.1.0
-- **Kaynak**: FDA, EMA, EMC, KEGG
-- **İlaç Sayısı**: 2,562 bileşen
-- **Yan Etki**: 7,177 farklı yan etki
-- **Toplam Kayıt**: 7.1+ milyon ilişki
-
-### Veri İşleme
-1. CSV dosyalarından ilaç bilgileri çıkarma
-2. Metin parçalama ve temizleme
-3. OpenAI embeddings ile vektörizasyon
-4. ChromaDB'de saklama
-
-## ⚠️ Güvenlik ve Sorumluluk
-
-### Önemli Uyarılar
-- Bu sistem **sadece bilgilendirme amaçlıdır**
-- Kesinlikle **tıbbi tavsiye vermez**
-- Her zaman **doktorunuza danışın**
-- Acil durumlarda **112'yi arayın**
-
-### Veri Güvenliği
-- API anahtarları `.env` dosyasında
-- Kullanıcı verileri loglanmaz
-- HTTPS kullanımı önerilir
-
-## 🧪 Test
-
-### Unit Testler
-```bash
-python -m pytest tests/
-```
-
-### Manuel Test
-```bash
-# Basit sorgu testi
-curl -X POST http://localhost:5001/api/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "aspirin"}'
-```
-
-## 📈 Performans
-
-### Yanıt Süreleri
-- **Vektör Arama**: ~200ms
-- **LLM İşleme**: ~2-5 saniye
-- **Toplam**: ~3-6 saniye
-
-### Kaynak Kullanımı
-- **RAM**: ~500MB (vektör DB dahil)
-- **Disk**: ~35MB (veritabanı)
-- **CPU**: Orta düzey
-
-## 🤝 Katkıda Bulunma
-
-### Geliştirme Süreci
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Değişiklikleri commit edin (`git commit -am 'Yeni özellik eklendi'`)
-4. Branch'i push edin (`git push origin feature/yeni-ozellik`)
-5. Pull Request açın
-
-### Kod Standartları
-- Python PEP 8 uyumluluğu
-- Türkçe docstring'ler
-- Type hints kullanımı
-- Error handling zorunlu
-
-## 📝 Sürüm Notları
-
-### v1.0.0 (Mevcut)
-- ✅ OnSIDES dataset entegrasyonu
-- ✅ Web arayüzü
-- ✅ GPT-4 destekli yanıtlar
-- ✅ Türkçe dil desteği
-- ✅ Anlaşılır çıktı formatı
-
-### Planlanan Özellikler
-- 🔄 İlaç etkileşim kontrolü
-- 🔄 Çoklu dil desteği
-- 🔄 Mobil uygulama
-- 🔄 Sesli asistan
-
-## 📞 Destek
-
-### Yaygın Sorunlar
-1. **"Vektör veritabanı boş"** → `create_drug_vectordb.py` çalıştırın
-2. **"API hatası"** → `.env` dosyasında OpenAI anahtarını kontrol edin
-3. **"Port kullanımda"** → `drugbot_web.py`'de farklı port kullanın
-
-### İletişim
-- 🐛 Bug raporları için Issues açın
-- 💡 Özellik istekleri için Discussions kullanın
-- 📧 Acil durumlar için repository sahibine ulaşın
-
-## 📜 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
-
-## 🙏 Teşekkürler
-
-- **OnSIDES Dataset** geliştiricilerine
-- **OpenAI** GPT-4 modeli için
-- **LangChain** ekosistemi için
-- **ChromaDB** vektör veritabanı için
+Bu doküman, DrugBot projesinin geliştirme süreçlerini ve sprint çıktılarını detaylandırmak amacıyla oluşturulmuştur.
 
 ---
 
-**⚠️ Yasal Uyarı**: DrugBot bir eğitim ve araştırma projesidir. Gerçek tıbbi durumlar için mutlaka sağlık profesyonellerine danışın. Bu yazılımın kullanımından doğabilecek her türlü zarar kullanıcının sorumluluğundadır.
+## 🚀 Sprint 1: Temel Fonksiyonların Geliştirilmesi
 
-**💊 Sağlıklı günler dileriz!**
+### Sprint Notları
+- **Proje Yönetimi**: Proje takibi için Trello kullanılmasına karar verildi.
+- **UI/UX Tasarım**: Arayüz tasarımları için Figma üzerinde çalışıldı.
+- **Backend Mimarisi**: Projenin temelini Flask ve LangChain oluşturmaktadır.
+- **Veritabanı**: Vektör veritabanı olarak ChromaDB seçildi.
+- **Dil Modeli**: Yanıtların üretilmesi için OpenAI GPT-4 modeli entegre edildi.
+- **Veri Seti**: OnSIDES v3.1.0 veri seti, ilaç bilgilerinin kaynağı olarak kullanıldı.
+
+### Puan Tamamlama Mantığı
+- **Tahmini Puan**: 100 Puan
+- **Tamamlanan Puan**: 120 Puan
+- **Açıklama**: İlk sprint için temel kurulum, veri işleme ve arayüzün iskeleti hedeflenmişti. Vektör veritabanının beklenenden hızlı entegre edilmesiyle fazladan puan kazanıldı.
+
+### Daily Scrum
+- Günlük toplantılar, geliştirme sürecindeki engelleri ve ilerlemeyi takip etmek amacıyla düzenli olarak yapıldı. Kritik bir sorunla karşılaşılmadı.
+
+### Sprint Board Güncellemesi
+- Trello panosu üzerinde görevler "To Do", "In Progress" ve "Done" sütunlarında takip edildi. Sprint sonunda tüm temel görevler "Done" sütununa taşındı.
+
+### Ürün Durumu: Ekran Görüntüleri
+
+**Ana Sayfa ve Örnek Sorular:**
+*Kullanıcıları karşılayan ve örnek sorgular sunan başlangıç ekranı.*
+![Ana Sayfa](https://i.imgur.com/rD4g5dM.png)
+
+**Sorgu İşlenirken:**
+*Kullanıcı bir soru sorduğunda sistemin yanıtı hazırlama süreci.*
+![Sorgu İşleniyor](https://i.imgur.com/5zS3sL3.png)
+
+**Yanıt Ekranı:**
+*Sistemin ürettiği anlaşılır ve formatlanmış ilaç bilgisi yanıtı.*
+![Yanıt Ekranı](https://i.imgur.com/BvY9E9O.png)
+
+### Sprint Review: Alınan Kararlar
+- Vektör veritabanı oluşturma script'i (`create_drug_vectordb.py`) başarıyla tamamlandı ve test edildi.
+- Web arayüzü (`drugbot_web.py`) temel işlevselliğe kavuştu: kullanıcı sorgusu alma, backend'e iletme ve yanıtı gösterme.
+- Yanıt formatının kullanıcı dostu olması için özel bir prompt yapısı geliştirildi.
+
+### Sprint Retrospective
+- **Olumlu Yönler**: Ekip içi iletişim ve koordinasyon yüksekti. Teknik hedeflere ulaşıldı.
+- **Geliştirilecek Yönler**: Gelecek sprintlerde daha detaylı birim (unit) testleri yazılması kararlaştırıldı.
+
+---
+
+## 🛠️ Proje Mimarisi ve Çalışma Prensibi
+
+DrugBot, kullanıcı sorgularını işlemek ve doğru yanıtlar üretmek için modüler bir mimari kullanır.
+
+### Mermaid Diagramı
+Aşağıdaki diagram, bir kullanıcı sorgusunun sistem içinde nasıl işlendiğini göstermektedir:
+
+```mermaid
+graph TD
+    subgraph Kullanıcı Arayüzü
+        A[Kullanıcı Sorusu] --> B{Flask Web Sunucusu};
+    end
+
+    subgraph Backend Servisleri
+        B --> C[DrugBotWeb Sınıfı];
+        C --> D{Vektör Veritabanı (ChromaDB)};
+        C --> E{LLM (OpenAI GPT-4)};
+    end
+
+    subgraph Veri Katmanı
+        F[OnSIDES Dataset] --> G[create_drug_vectordb.py];
+        G --> D;
+    end
+
+    B -- Sorguyu Alır --> C;
+    C -- Anlamsal Arama Yapar --> D;
+    D -- İlgili İlaç Bilgilerini Döndürür --> C;
+    C -- Bilgilerle Prompt Oluşturur --> E;
+    E -- Anlaşılır Yanıt Üretir --> C;
+    C -- Yanıtı Arayüze Gönderir --> B;
+    B -- Yanıtı Gösterir --> A;
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style F fill:#fcf,stroke:#333,stroke-width:2px
+```
+
+### Teknoloji Yığını
+- **Backend**: Flask, LangChain
+- **Dil Modeli**: OpenAI GPT-4
+- **Vektör Veritabanı**: ChromaDB
+- **Frontend**: HTML, CSS, JavaScript
+- **Veri Seti**: OnSIDES v3.1.0
+
+---
+
+## 🚀 Hızlı Başlangıç
+
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
+
+### Gereksinimler
+- Python 3.8 veya üstü
+- OpenAI API Anahtarı
+
+### 1. Projeyi Klonlama
+```bash
+git clone https://github.com/aslikiziltan/GrantSpider_Chatbot_asliFeatures.git
+cd GrantSpider_Chatbot_asliFeatures
+```
+
+### 2. Bağımlılıkları Yükleme
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Ortam Değişkenlerini Ayarlama
+Proje ana dizininde `.env` adında bir dosya oluşturun ve içine OpenAI API anahtarınızı ekleyin:
+```
+OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+### 4. Vektör Veritabanını Oluşturma
+İlaç verilerini işleyip vektör veritabanını oluşturmak için aşağıdaki komutu çalıştırın. Bu işlem biraz zaman alabilir.
+```bash
+python create_drug_vectordb.py
+```
+
+### 5. Web Uygulamasını Başlatma
+```bash
+python interfaces/drugbot_web.py
+```
+Uygulama başlatıldıktan sonra tarayıcınızda `http://localhost:5001` adresini ziyaret edebilirsiniz.
+
+---
+
+## ⚠️ Yasal Uyarı
+
+Bu proje **sadece bilgilendirme amaçlıdır** ve kesinlikle **tıbbi tavsiye niteliği taşımaz**. Herhangi bir ilacı kullanmadan önce mutlaka bir doktora veya eczacıya danışın. Bu yazılımın kullanımından kaynaklanabilecek herhangi bir sorun kullanıcının kendi sorumluluğundadır.
