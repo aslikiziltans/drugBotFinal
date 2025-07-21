@@ -36,7 +36,7 @@ Sprint Planı (3 Sprint)
 
 •	Sprint 1: Temel ilaç veritabanı kurulumu, prospektüs veri çekme & arama/doğrulama
 •	Sprint 2: LLM entegrasyonu, soru-cevap motoru ve uyarı sistemi
-•	Sprint 3: Web/mobil arayüz, kullanım geçmişi, test ve kullanıcı geri bildirimi
+•	Sprint 3: Web arayüz, kullanım geçmişi, test ve kullanıcı geri bildirimi
 <img width="470" height="645" alt="image" src="https://github.com/user-attachments/assets/8ae1d98f-bad7-4114-ba59-afd6167a2bc6" />
 # 💊 DrugBot - Proje Geliştirme Raporu
 
@@ -69,15 +69,16 @@ Bu doküman, DrugBot projesinin geliştirme süreçlerini ve sprint çıktılar�
 
 **Ana Sayfa ve Örnek Sorular:**
 *Kullanıcıları karşılayan ve örnek sorgular sunan başlangıç ekranı.*
-![Ana Sayfa](https://i.imgur.com/rD4g5dM.png)
+'https://github.com/aslikiziltans/drugBotFinal/tree/main/ekranfoto' bu sayfayi ziyaret edebilirsiniz. 
 
 **Sorgu İşlenirken:**
 *Kullanıcı bir soru sorduğunda sistemin yanıtı hazırlama süreci.*
-![Sorgu İşleniyor](https://i.imgur.com/5zS3sL3.png)
+'https://github.com/aslikiziltans/drugBotFinal/tree/main/ekranfoto' bu sayfayi ziyaret edebilirsiniz. 
 
 **Yanıt Ekranı:**
 *Sistemin ürettiği anlaşılır ve formatlanmış ilaç bilgisi yanıtı.*
-![Yanıt Ekranı](https://i.imgur.com/BvY9E9O.png)
+'https://github.com/aslikiziltans/drugBotFinal/tree/main/ekranfoto' bu sayfayi ziyaret edebilirsiniz. 
+
 
 ### Sprint Review: Alınan Kararlar
 - Vektör veritabanı oluşturma script'i (`create_drug_vectordb.py`) başarıyla tamamlandı ve test edildi.
@@ -173,6 +174,9 @@ python interfaces/drugbot_web.py
 ```
 Uygulama başlatıldıktan sonra tarayıcınızda `http://localhost:5001` adresini ziyaret edebilirsiniz.
 
+### 6. Ekran Fotograflari
+
+'https://github.com/aslikiziltans/drugBotFinal/tree/main/ekranfoto' bu sayfayi ziyaret edebilirsiniz. 
 ---
 
 
