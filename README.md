@@ -4,7 +4,7 @@ Bu doküman, DrugBot projesinin geliştirme süreçlerini ve sprint çıktılar�
 
 ---
 
-## 🚀 Sprint 1: Temel Fonksiyonların Geliştirilmesi
+## 🚀 Sprint 2: Temel Fonksiyonların Geliştirilmesi
 
 ### Sprint Notları
 - **Proje Yönetimi**: Proje takibi için Trello kullanılmasına karar verildi.
@@ -135,6 +135,3 @@ Uygulama başlatıldıktan sonra tarayıcınızda `http://localhost:5001` adresi
 
 ---
 
-## ⚠️ Yasal Uyarı
-
-Bu proje **sadece bilgilendirme amaçlıdır** ve kesinlikle **tıbbi tavsiye niteliği taşımaz**. Herhangi bir ilacı kullanmadan önce mutlaka bir doktora veya eczacıya danışın. Bu yazılımın kullanımından kaynaklanabilecek herhangi bir sorun kullanıcının kendi sorumluluğundadır.
